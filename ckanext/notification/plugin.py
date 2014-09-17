@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 class TwitterNotificationPlugin(plugins.SingletonPlugin):
 
     plugins.implements(interfaces.IConfigurable)
-    plugins.implements(interfaces.IDomainObjectModification)
+    plugins.implements(interfaces.IDomainObjectModification, inherit=True)
 
     # Consumer key
     consumer_key = None
